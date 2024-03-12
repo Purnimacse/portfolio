@@ -1,0 +1,12 @@
+---
+import FormattedDate from "./FormattedDate.astro";
+
+ const{title,date,slug}= Astro.props; // u can give default values here
+---
+<a href={`/blog/${slug }`}>
+<article class="flex flex-row items-center justify-between">
+    <h3 class="text-base text-black">{title}</h3>
+    <p class="text-gray-500"><FormattedDate date={date}/></p>
+    
+</article>
+</a>
